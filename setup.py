@@ -4,7 +4,7 @@ from pathlib import Path
 this_directory = Path(__file__).parent
 long_description = (this_directory / "README.md").read_text()
 setup(
-    name='KDTree',
+    name='KDTree4RRT',
     version='0.0.1',
     description='A KDTree Implementation meant for use with the Rapidly Exploring Random Tree Algorithm',
     author='Ofek Peres',
