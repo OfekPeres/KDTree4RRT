@@ -13,6 +13,5 @@ setup(
     install_requires=[
         'typing',
         'numpy',
-        'matplotlib'
     ],
 )

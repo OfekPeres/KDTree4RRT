@@ -22,6 +22,8 @@ class KDTreeNode:
         # I will define the parent as the closest neighbor to this node
         # at the time this node was added to the tree
         self.parent = None
+        # The index in the kdtree array representation. Only the root node should have a value of -1 as it has no parents
+        self.index = 0 
         self.isOnGoalPath = False
     def set_depth(self, depth):
         self.depth =depth
@@ -53,6 +55,17 @@ class KDTreeNode:
     def compare_to_point(self, point):
         axis = self.axis
         return self.p[axis] - point[axis]
+
+
+    def node_to_dict(self):
+        parentIndex = -1
+        if self.parent is not None:
+            parentIndex = self.parent.index
+        return {
+            "x":self.p[0],
+            "y":self.p[1],
+            "parentIndex": parentIndex}
+
     def __lt__(self, other):
         '''
         Operator overload for the < (less than)
