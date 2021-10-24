@@ -1,4 +1,4 @@
-from KDTreeNode import KDTreeNode
+from .KDTreeNode import KDTreeNode
 from typing import List, Text
 from pprint import pprint
 
